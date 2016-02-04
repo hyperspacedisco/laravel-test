@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\product;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,17 +14,7 @@ class ProductsController extends Controller
     //in charge of showing default products page
     public function index() {
 
-    	$products = [
-    		[
-    			'name' => 'apple',
-    			'price' => '$1'
-    		],
-
-    		[
-    			'name' => 'banana',
-    			'price' => '$1.50'
-    		]
-    	];
+    	$products = Product::all();
 
     	$popularProducts = [];
     	return view('products', compact('products', 'popularProducts'));

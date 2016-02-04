@@ -10,6 +10,6 @@
 
 	<h3>Latest: </h3>
 	@foreach($products as $product)
-		<p>{{ $product['name'] }} at {{ $product['price'] }} each.</p>
+		<p>{{ $product['name'] }} at {{ $product['price'] }} each. {{ $product['stock']}} in stock.</p>
 	@endforeach
 @endsection
