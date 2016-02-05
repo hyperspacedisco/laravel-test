@@ -11,6 +11,19 @@
 	h1{
 		text-align: center;
 	}
+
+	nav ul li {
+		display: inline-block;
+		list-style: none;
+		}
+
+	nav ul li a:hover {
+		text-decoration: none;
+	}
+
+	nav ul li a:visited {
+		color: blue;
+	}
 	</style>
 </head>
 <body>
