@@ -12,8 +12,7 @@
 
 	<h3>Latest: </h3>
 	@foreach($products as $product)
-		<p><strong>{{ $product['name'] }} </strong>at ${{ $product['price'] }} each. {{ $product['stock']}} in stock.</p>
-		<p><em>{{ $product['description']}}</em></p>
+		<p><a href="/products/{{ $product->id }}"><strong>{{ $product['name'] }} </strong>at ${{ $product['price'] }} each.</a></p>
 		<hr />
 	@endforeach
 @endsection

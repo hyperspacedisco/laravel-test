@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>About</title>
+	<title>test</title>
 	<style type="text/css">
 	* {
 		font-family: sans-serif;
@@ -42,7 +42,7 @@
 	@yield('content')
 
 	<footer>
-		<p style="text-align: center">Copyright goes here</p>
+		<p style="text-align: center">Copyright etc.</p>
 	</footer>
 
 </body>

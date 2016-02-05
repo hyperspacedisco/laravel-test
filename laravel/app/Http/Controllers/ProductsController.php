@@ -49,6 +49,36 @@ class ProductsController extends Controller
     	return redirect('products');
     }
 
+    public function show( $id ){
+
+    	$product = Product::findOrFail($id);
+
+    	return view('products.show', compact('product'));
+    }
+
+    public function edit( $id ){
+
+    	$product = Product::findOrFail($id);
+
+    	return view('products.edit', compact('product'));
+    }
+
+    public function update( $id, Request $request ){
+
+
+    	$this->validate($request, [
+    			'name' => 'required|min:2|max:10'
+    		]);
+
+    	$product = Product::findOrFail($id);
+
+    	$product->name = $request->name;
+
+    	$product->save();
+
+    	return redirect('products/'.$id);
+    }
+
 }
 
 
